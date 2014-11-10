@@ -46,13 +46,15 @@
         chartData: [{label: 'U.S.', value: 76, color:''}, {label: 'China', value: 43, color:''}], 
         chartSize: "200",
         init: function() {
-          var self = this,
-              margin = {
-                top : self.chartSize*0.14,
-                bottom : self.chartSize*0.14,
+          var self = this;
+          self.getComputedDims(self);
+
+          var margin = {
+                top : self.computedSize*0.14,
+                bottom : self.computedSize*0.14,
                 label: 3
               }, 
-              width = self.chartSize*0.95, 
+              width = self.computedSize*0.95, 
               height = width + margin.top + margin.bottom,
               pi = Math.PI,
               progress = 0,
