@@ -44,14 +44,14 @@
         chartSize: "200",
         init: function() {
           var self = this;
-          self.computedSize = Math.min(self.computeWidth(), self.computeHeight());
+          self.chartSize = Math.min(self.computeWidth(), self.computeHeight());
 
           var margin = {
-                top : self.computedSize*0.14,
-                bottom : self.computedSize*0.14,
+                top : self.chartSize*0.14,
+                bottom : self.chartSize*0.14,
                 label: 3
               }, 
-              width = self.computedSize*0.95, 
+              width = self.chartSize, 
               height = width + margin.top + margin.bottom,
               pi = Math.PI,
               progress = 0,
